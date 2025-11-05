@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cybersecurity Job Roles — Learning Roadmap</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Cybersecurity — Job Roles & Learning Roadmap</h1>
+    <p class="subtitle">Interactive tree: click to expand, use mouse to pan/zoom, see full learning path & commands</p>
+  </header>
+
+  <div id="topbar">
+    <input id="search" placeholder="Search role, tool or topic (press Enter)" />
+    <select id="levelFilter" title="Filter by level">
+      <option value="All">All levels</option>
+      <option value="Beginner">Beginner</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Advanced">Advanced</option>
+    </select>
+    <button id="zoomIn">Zoom +</button>
+    <button id="zoomOut">Zoom −</button>
+    <button id="fit">Fit</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <main id="main">
+    <div id="treewrap">
+      <svg id="treeSvg" aria-label="Cybersecurity job roles tree"></svg>
+      <aside id="infopane" aria-live="polite">
+        <h2 id="nodeTitle">Select a role or topic</h2>
+        <p id="nodeShort">Click a node to open the full learning path, tools, and example commands.</p>
+
+        <div class="meta">
+          <div><strong>Level:</strong> <span id="nodeLevel">—</span></div>
+          <div><strong>Role family:</strong> <span id="nodeFamily">—</span></div>
+        </div>
+
+        <h3>Learning Path</h3>
+        <ol id="learningPath"></ol>
+
+        <h3>Core Tools & Key Commands</h3>
+        <div id="nodeTools" class="tags"></div>
+
+        <h3>Quick Commands</h3>
+        <div id="nodeCommands" class="commands"></div>
+
+        <h3>Resources</h3>
+        <div id="nodeResources" class="tags"></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <small>MIT • For educational use only • Respect laws and permissions</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
